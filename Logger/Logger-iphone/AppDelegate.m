@@ -31,7 +31,12 @@
 #else
     [Logging setLogLevel:DDLogLevelAll];
 #endif
-    [NSTimer scheduledTimerWithTimeInterval:.1
+    
+//    如果要上传服务端
+    [Logging setLogLevel:DDLogLevelAll rollCallback:^(NSString *filePath) {
+        
+    }];
+    [NSTimer scheduledTimerWithTimeInterval:1
                                      target:self
                                    selector:@selector(log)
                                    userInfo:nil
@@ -41,6 +46,8 @@
 }
 
 - (void)log {
+    NSDictionary *json = @{@"name":@"asml",@"age":@12,@"loc":@"hunan"};
+    DDLogInfo(@"%@",json);
     DDLogError(@"Paper Jam!");
     DDLogWarn(@"Low toner");
     DDLogInfo(@"Printing SalesProjections.doc");
