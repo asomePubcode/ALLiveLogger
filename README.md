@@ -22,9 +22,9 @@ $pod install
 * 加载出页面后打开元素检查，进到日志页面
 
 ### 截图
-![](https://github.com/asomePubcode/Logger/blob/master/Images/liveLog.jpg)
-![](https://github.com/asomePubcode/Logger/blob/master/Images/fileLog.jpg)
-![](https://github.com/asomePubcode/Logger/blob/master/Images/terminalLog.jpg)
+![网页端实时日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/liveLog.jpg)
+![写入文件和数据库截图](https://github.com/asomePubcode/Logger/blob/master/Images/fileLog.jpg)
+![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/terminalLog.jpg)
 
 ### Author
 
