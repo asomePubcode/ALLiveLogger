@@ -18,12 +18,13 @@ $git clone https://github.com/asomePubcode/Logger.git
 $pod install 
 ```
 * 运行demo
-* 打开电脑的浏览器输入 "http://你手机IP:61234" 
+* 打开电脑的浏览器输入 "http://你手机IP:61234" （需要电脑和手机为统一局域网下）
 * 加载出页面后打开元素检查，进到日志页面
 
 ### 截图
 ![](https://github.com/asomePubcode/Logger/blob/master/Images/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE.jpg)
 ![](https://github.com/asomePubcode/Logger/blob/master/Images/%E6%96%87%E4%BB%B6%E6%88%AA%E5%9B%BE.jpg)
 
-###License
+### License
+
 Logger is available under the BSD 3 license. See the [LICENSE](https://github.com/asomePubcode/Logger/blob/master/LICENSE) file.
