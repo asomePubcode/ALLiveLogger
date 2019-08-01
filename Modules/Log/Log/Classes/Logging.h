@@ -12,5 +12,6 @@ extern DDLogLevel ddLogLevel;
 
 @interface Logging : NSObject
 + (void)setLogLevel:(DDLogLevel)logLevel;
++ (void)setLogLevel:(DDLogLevel)logLevel rollCallback:(void (^)(NSString *))callback;
 + (NSString *)defaultLogsDirectory;
 @end

@@ -33,9 +33,9 @@
 #endif
     
 //    如果要上传服务端
-    [Logging setLogLevel:DDLogLevelAll rollCallback:^(NSString *filePath) {
-        
-    }];
+//    [Logging setLogLevel:DDLogLevelAll rollCallback:^(NSString *filePath) {
+//
+//    }];
     [NSTimer scheduledTimerWithTimeInterval:1
                                      target:self
                                    selector:@selector(log)

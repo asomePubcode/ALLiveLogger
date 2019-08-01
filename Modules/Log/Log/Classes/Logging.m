@@ -10,10 +10,11 @@
 #import "Logging.h"
 #import "LogFormatter.h"
 #import "FMDBLogger.h"
-
+#import "LoggingFileManager.h"
 
 static DDFileLogger *fileLogger   = nil;
 static FMDBLogger   *sqliteLogger = nil;
+static id _callback = NULL;
 @implementation Logging
 
 DDLogLevel ddLogLevel = DDLogLevelVerbose;
@@ -22,6 +23,9 @@ DDLogLevel ddLogLevel = DDLogLevelVerbose;
     ddLogLevel = logLevel;
     if (ddLogLevel == DDLogLevelOff) {
         [[DDLog sharedInstance] removeAllLoggers];
+        fileLogger = nil;
+        sqliteLogger = nil;
+        _callback = NULL;
         return;
     }
 
@@ -37,6 +41,12 @@ DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [self setDispathQueueFormatter];
     
 }
+
+
++ (void)setLogLevel:(DDLogLevel)logLevel rollCallback:(void (^)(NSString *))callback  {
+    _callback = callback;
+    [self setLogLevel:logLevel];
+}
 + (void)addTYYLogger {
     
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
@@ -51,10 +61,14 @@ DDLogLevel ddLogLevel = DDLogLevelVerbose;
 }
 
 + (void)addFileLogger {
-    fileLogger = [[DDFileLogger alloc] init];
-    fileLogger.maximumFileSize = 1024 * 1;  //  10M
-    fileLogger.rollingFrequency = 60 * 1;       // 60 Seconds
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 4;
+    LoggingFileManager *fileManager = [LoggingFileManager new];
+    fileManager.rollFile = _callback;
+    fileLogger = [[DDFileLogger alloc] initWithLogFileManager:fileManager];
+    fileLogger.maximumFileSize = 1024 * 1;  //  1M
+    fileLogger.rollingFrequency = 60 * 6;       // 60 Seconds
+    
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 1;
+    
     [DDLog addLogger:fileLogger];
 
 }
