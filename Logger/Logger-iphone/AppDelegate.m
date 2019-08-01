@@ -7,9 +7,14 @@
 //
 
 #import "AppDelegate.h"
-#import "LogFormatter.h"
 
-#import "Livelogging.h"
+#if __has_include("LiveLogging.h")
+#import "LiveLogging.h"
+#else
+#import "Logging.h"
+#endif
+
+
 
 @interface AppDelegate ()
 
@@ -21,7 +26,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Livelogging setLogLevel:DDLogLevelVerbose];
+#ifdef LiveLog
+    [LiveLogging setLogLevel:DDLogLevelAll];
+#else
+    [Logging setLogLevel:DDLogLevelAll];
+#endif
     [NSTimer scheduledTimerWithTimeInterval:.1
                                      target:self
                                    selector:@selector(log)
