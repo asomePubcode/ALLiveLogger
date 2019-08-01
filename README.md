@@ -13,10 +13,8 @@
 $git clone https://github.com/asomePubcode/Logger.git
 ```
 * 安装依赖
-* 
-```
-$cd yourPth/Logger
 
+```
 $pod install 
 ```
 * 运行demo
