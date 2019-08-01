@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE04FDFA22EAA5E200EFA0CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */; };
+		BE04FDFD22EAA5E200EFA0CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FDFC22EAA5E200EFA0CD /* ViewController.m */; };
+		BE04FE0022EAA5E200EFA0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04FDFE22EAA5E200EFA0CD /* Main.storyboard */; };
+		BE04FE0222EAA5FB00EFA0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE04FE0122EAA5FB00EFA0CD /* Assets.xcassets */; };
+		BE04FE0522EAA5FB00EFA0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04FE0322EAA5FB00EFA0CD /* LaunchScreen.storyboard */; };
+		BE04FE0822EAA5FB00EFA0CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FE0722EAA5FB00EFA0CD /* main.m */; };
+		D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */; };
+		F6E6C770833F22AD20B6B405 /* libPods-Logger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EDB3CFB3223C7D2A4E949D3 /* Pods-Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Logger/Pods-Logger.release.xcconfig"; sourceTree = "<group>"; };
+		6852C7DBF779210A267E2CEB /* Pods-Logger-iphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger-iphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone.release.xcconfig"; sourceTree = "<group>"; };
+		8D459E939B113C1066F81F67 /* Pods-Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logger/Pods-Logger.debug.xcconfig"; sourceTree = "<group>"; };
+		9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger-iphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone.debug.xcconfig"; sourceTree = "<group>"; };
+		BE04FDCA22E850F600EFA0CD /* Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logger-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE04FDF822EAA5E200EFA0CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE04FDFB22EAA5E200EFA0CD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE04FDFC22EAA5E200EFA0CD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE04FDFF22EAA5E200EFA0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE04FE0122EAA5FB00EFA0CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE04FE0422EAA5FB00EFA0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE04FE0622EAA5FB00EFA0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE04FE0722EAA5FB00EFA0CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE04FDC722E850F600EFA0CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E6C770833F22AD20B6B405 /* libPods-Logger.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE04FDF322EAA5E200EFA0CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04911C2616E935393C619A3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */,
+				9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50BAEB34BBBB43FF121B342B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D459E939B113C1066F81F67 /* Pods-Logger.debug.xcconfig */,
+				2EDB3CFB3223C7D2A4E949D3 /* Pods-Logger.release.xcconfig */,
+				BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */,
+				6852C7DBF779210A267E2CEB /* Pods-Logger-iphone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE04FDC122E850F600EFA0CD = {
+			isa = PBXGroup;
+			children = (
+				BE04FDF722EAA5E200EFA0CD /* Logger-iphone */,
+				BE04FDCB22E850F600EFA0CD /* Products */,
+				50BAEB34BBBB43FF121B342B /* Pods */,
+				04911C2616E935393C619A3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE04FDCB22E850F600EFA0CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE04FDCA22E850F600EFA0CD /* Logger.app */,
+				BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE04FDF722EAA5E200EFA0CD /* Logger-iphone */ = {
+			isa = PBXGroup;
+			children = (
+				BE04FDF822EAA5E200EFA0CD /* AppDelegate.h */,
+				BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */,
+				BE04FDFB22EAA5E200EFA0CD /* ViewController.h */,
+				BE04FDFC22EAA5E200EFA0CD /* ViewController.m */,
+				BE04FDFE22EAA5E200EFA0CD /* Main.storyboard */,
+				BE04FE0122EAA5FB00EFA0CD /* Assets.xcassets */,
+				BE04FE0322EAA5FB00EFA0CD /* LaunchScreen.storyboard */,
+				BE04FE0622EAA5FB00EFA0CD /* Info.plist */,
+				BE04FE0722EAA5FB00EFA0CD /* main.m */,
+			);
+			path = "Logger-iphone";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE04FDC922E850F600EFA0CD /* Logger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE04FDDB22E850F800EFA0CD /* Build configuration list for PBXNativeTarget "Logger" */;
+			buildPhases = (
+				8B8DE409AA56372FAE8642B6 /* [CP] Check Pods Manifest.lock */,
+				BE04FDC622E850F600EFA0CD /* Sources */,
+				BE04FDC722E850F600EFA0CD /* Frameworks */,
+				BE04FDC822E850F600EFA0CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Logger;
+			productName = Logger;
+			productReference = BE04FDCA22E850F600EFA0CD /* Logger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE04FDF522EAA5E200EFA0CD /* Logger-iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE04FE0922EAA5FB00EFA0CD /* Build configuration list for PBXNativeTarget "Logger-iphone" */;
+			buildPhases = (
+				160743C2C68CCAA80F6ABF3F /* [CP] Check Pods Manifest.lock */,
+				BE04FDF222EAA5E200EFA0CD /* Sources */,
+				BE04FDF322EAA5E200EFA0CD /* Frameworks */,
+				BE04FDF422EAA5E200EFA0CD /* Resources */,
+				0658F0A962FEF7328C5D3624 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Logger-iphone";
+			productName = "Logger-iphone";
+			productReference = BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE04FDC222E850F600EFA0CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "廖亚雄";
+				TargetAttributes = {
+					BE04FDC922E850F600EFA0CD = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BE04FDF522EAA5E200EFA0CD = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BE04FDC522E850F600EFA0CD /* Build configuration list for PBXProject "Logger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE04FDC122E850F600EFA0CD;
+			productRefGroup = BE04FDCB22E850F600EFA0CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE04FDC922E850F600EFA0CD /* Logger */,
+				BE04FDF522EAA5E200EFA0CD /* Logger-iphone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE04FDC822E850F600EFA0CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE04FDF422EAA5E200EFA0CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE04FE0522EAA5FB00EFA0CD /* LaunchScreen.storyboard in Resources */,
+				BE04FE0222EAA5FB00EFA0CD /* Assets.xcassets in Resources */,
+				BE04FE0022EAA5E200EFA0CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0658F0A962FEF7328C5D3624 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-resources.sh",
+				"${PODS_ROOT}/../../Modules/LiveLog/LiveLog/Assets/Resource.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		160743C2C68CCAA80F6ABF3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Logger-iphone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B8DE409AA56372FAE8642B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Logger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE04FDC622E850F600EFA0CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE04FDF222EAA5E200EFA0CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE04FDFD22EAA5E200EFA0CD /* ViewController.m in Sources */,
+				BE04FE0822EAA5FB00EFA0CD /* main.m in Sources */,
+				BE04FDFA22EAA5E200EFA0CD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE04FDFE22EAA5E200EFA0CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE04FDFF22EAA5E200EFA0CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE04FE0322EAA5FB00EFA0CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE04FE0422EAA5FB00EFA0CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE04FDD922E850F800EFA0CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE04FDDA22E850F800EFA0CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE04FDDC22E850F800EFA0CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D459E939B113C1066F81F67 /* Pods-Logger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Logger/Logger.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8K32ADYVFZ;
+				INFOPLIST_FILE = Logger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iotsolution.Logger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		BE04FDDD22E850F800EFA0CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EDB3CFB3223C7D2A4E949D3 /* Pods-Logger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Logger/Logger.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Logger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iotsolution.Logger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		BE04FE0A22EAA5FB00EFA0CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AQATEQGY4;
+				INFOPLIST_FILE = "Logger-iphone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iotsolution.Logger-iphone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE04FE0B22EAA5FB00EFA0CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6852C7DBF779210A267E2CEB /* Pods-Logger-iphone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AQATEQGY4;
+				INFOPLIST_FILE = "Logger-iphone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iotsolution.Logger-iphone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE04FDC522E850F600EFA0CD /* Build configuration list for PBXProject "Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE04FDD922E850F800EFA0CD /* Debug */,
+				BE04FDDA22E850F800EFA0CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE04FDDB22E850F800EFA0CD /* Build configuration list for PBXNativeTarget "Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE04FDDC22E850F800EFA0CD /* Debug */,
+				BE04FDDD22E850F800EFA0CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE04FE0922EAA5FB00EFA0CD /* Build configuration list for PBXNativeTarget "Logger-iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE04FE0A22EAA5FB00EFA0CD /* Debug */,
+				BE04FE0B22EAA5FB00EFA0CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE04FDC222E850F600EFA0CD /* Project object */;
+}

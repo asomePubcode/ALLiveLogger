@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta name="theme-color" content="#000000">
+        <title>Live log</title>
+        <script>
+            var dpr,rem,docEl=document.documentElement,fontEl=document.createElement("style"),scale=(docEl.clientWidth/375).toFixed(2);dpr=window.devicePixelRatio||1,1.4<scale&&(scale=1),rem=12*scale,docEl.setAttribute("data-dpr",dpr),docEl.setAttribute("data-scale",scale),docEl.firstElementChild.appendChild(fontEl),fontEl.innerHTML="html{font-size:"+rem+"px!important;}"
+            </script>
+    </head>
+    <body>
+        <a id="openApp">打开浏览器审查元素，进入console界面</a>
+<!--        <li><a href="logs.html">View log files on device</a></li>-->
+<!--        <li><a href="socket.html">View logging in real time</a></li>-->
+        <script>
+            var url = window.location.origin.replace("http","ws")+"/livelog";
+            var ws = new WebSocket(url);
+            ws.onclose = function (event) {
+                console.log("ws close:",event.data);
+            }
+            ws.onerror = function (event) {
+                console.log("ws error:",event.data);
+            }
+            ws.onmessage = function (event) {
+                
+                var data = event.data;
+                var date = "ws";
+                console.log(date,data);
+            }
+            ws.onopen = function (event) {console.log("ws opened");}
+            window.webs = ws;
+            </script>
+
+    </body>
+
+</html>

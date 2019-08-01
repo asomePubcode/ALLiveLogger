@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Logger' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Logger
+	pod 'CocoaLumberjack'
+    pod 'FMDB'
+    pod 'CocoaHTTPServer',:git => 'https://github.com/asameLiao/CocoaHTTPServer.git'
+#    pod 'LiveLog',:path => '../Modules/LiveLog/'
+end
+target 'Logger-iphone' do
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    # use_frameworks!
+    
+    # Pods for Logger
+    pod 'Log',:path => '../Modules/Log/'
+    pod 'LiveLog',:path => '../Modules/LiveLog/'
+end
