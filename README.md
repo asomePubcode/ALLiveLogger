@@ -26,6 +26,9 @@ $pod install
 ![](https://github.com/asomePubcode/Logger/blob/master/Images/fileLog.jpg)
 ![](https://github.com/asomePubcode/Logger/blob/master/Images/terminalLog.jpg)
 
+### Author
+
+[asomeLiao](https://github.com/asomeLiao)
 ### License
 
 Logger is available under the BSD 3 license. See the [LICENSE](https://github.com/asomePubcode/Logger/blob/master/LICENSE) file.
