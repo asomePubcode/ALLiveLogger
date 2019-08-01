@@ -10,8 +10,6 @@
     </head>
     <body>
         <a id="openApp">打开浏览器审查元素，进入console界面</a>
-<!--        <li><a href="logs.html">View log files on device</a></li>-->
-<!--        <li><a href="socket.html">View logging in real time</a></li>-->
         <script>
             var url = window.location.origin.replace("http","ws")+"/livelog";
             var ws = new WebSocket(url);
@@ -22,10 +20,8 @@
                 console.log("ws error:",event.data);
             }
             ws.onmessage = function (event) {
-                
                 var data = event.data;
-                var date = "ws";
-                console.log(date,data);
+                console.log(data);
             }
             ws.onopen = function (event) {console.log("ws opened");}
             window.webs = ws;
