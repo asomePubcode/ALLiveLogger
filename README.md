@@ -25,3 +25,7 @@ $pod install
 
 ### 截图
 ![](https://github.com/asomePubcode/Logger/blob/master/Images/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE.jpg)
+![](https://github.com/asomePubcode/Logger/blob/master/Images/%E6%96%87%E4%BB%B6%E6%88%AA%E5%9B%BE.jpg)
+
+###License
+Logger is available under the BSD 3 license. See the [LICENSE](https://github.com/asomePubcode/Logger/blob/master/LICENSE) file.
