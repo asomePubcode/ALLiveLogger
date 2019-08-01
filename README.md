@@ -31,4 +31,4 @@ $pod install
 [asomeLiao](https://github.com/asomeLiao)
 ### License
 
-Logger is available under the BSD 3 license. See the [LICENSE](https://github.com/asomePubcode/Logger/blob/master/LICENSE) file.
+see [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)、[CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)
