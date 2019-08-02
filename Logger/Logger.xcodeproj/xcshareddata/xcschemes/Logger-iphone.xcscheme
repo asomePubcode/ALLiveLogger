@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE04FDC922E850F600EFA0CD"
-               BuildableName = "Logger.app"
-               BlueprintName = "Logger"
+               BlueprintIdentifier = "BE04FDF522EAA5E200EFA0CD"
+               BuildableName = "Logger-iphone.app"
+               BlueprintName = "Logger-iphone"
                ReferencedContainer = "container:Logger.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE04FDC922E850F600EFA0CD"
-            BuildableName = "Logger.app"
-            BlueprintName = "Logger"
+            BlueprintIdentifier = "BE04FDF522EAA5E200EFA0CD"
+            BuildableName = "Logger-iphone.app"
+            BlueprintName = "Logger-iphone"
             ReferencedContainer = "container:Logger.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE04FDC922E850F600EFA0CD"
-            BuildableName = "Logger.app"
-            BlueprintName = "Logger"
+            BlueprintIdentifier = "BE04FDF522EAA5E200EFA0CD"
+            BuildableName = "Logger-iphone.app"
+            BlueprintName = "Logger-iphone"
             ReferencedContainer = "container:Logger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE04FDC922E850F600EFA0CD"
-            BuildableName = "Logger.app"
-            BlueprintName = "Logger"
+            BlueprintIdentifier = "BE04FDF522EAA5E200EFA0CD"
+            BuildableName = "Logger-iphone.app"
+            BlueprintName = "Logger-iphone"
             ReferencedContainer = "container:Logger.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
