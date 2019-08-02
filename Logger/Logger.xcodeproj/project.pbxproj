@@ -14,7 +14,6 @@
 		BE04FE0522EAA5FB00EFA0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04FE0322EAA5FB00EFA0CD /* LaunchScreen.storyboard */; };
 		BE04FE0822EAA5FB00EFA0CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FE0722EAA5FB00EFA0CD /* main.m */; };
 		D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */; };
-		F6E6C770833F22AD20B6B405 /* libPods-Logger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger-iphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone.debug.xcconfig"; sourceTree = "<group>"; };
-		BE04FDCA22E850F600EFA0CD /* Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logger-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE04FDF822EAA5E200EFA0CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,14 +36,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BE04FDC722E850F600EFA0CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6E6C770833F22AD20B6B405 /* libPods-Logger.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BE04FDF322EAA5E200EFA0CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,7 +80,6 @@
 		BE04FDCB22E850F600EFA0CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE04FDCA22E850F600EFA0CD /* Logger.app */,
 				BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */,
 			);
 			name = Products;
@@ -115,24 +104,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE04FDC922E850F600EFA0CD /* Logger */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE04FDDB22E850F800EFA0CD /* Build configuration list for PBXNativeTarget "Logger" */;
-			buildPhases = (
-				8B8DE409AA56372FAE8642B6 /* [CP] Check Pods Manifest.lock */,
-				BE04FDC622E850F600EFA0CD /* Sources */,
-				BE04FDC722E850F600EFA0CD /* Frameworks */,
-				BE04FDC822E850F600EFA0CD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Logger;
-			productName = Logger;
-			productReference = BE04FDCA22E850F600EFA0CD /* Logger.app */;
-			productType = "com.apple.product-type.application";
-		};
 		BE04FDF522EAA5E200EFA0CD /* Logger-iphone */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE04FE0922EAA5FB00EFA0CD /* Build configuration list for PBXNativeTarget "Logger-iphone" */;
@@ -161,9 +132,6 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "廖亚雄";
 				TargetAttributes = {
-					BE04FDC922E850F600EFA0CD = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
 					BE04FDF522EAA5E200EFA0CD = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -182,20 +150,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE04FDC922E850F600EFA0CD /* Logger */,
 				BE04FDF522EAA5E200EFA0CD /* Logger-iphone */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BE04FDC822E850F600EFA0CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BE04FDF422EAA5E200EFA0CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,38 +213,9 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B8DE409AA56372FAE8642B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Logger-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE04FDC622E850F600EFA0CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BE04FDF222EAA5E200EFA0CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,46 +359,6 @@
 			};
 			name = Release;
 		};
-		BE04FDDC22E850F800EFA0CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D459E939B113C1066F81F67 /* Pods-Logger.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Logger/Logger.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8K32ADYVFZ;
-				INFOPLIST_FILE = Logger/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iotsolution.Logger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Debug;
-		};
-		BE04FDDD22E850F800EFA0CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EDB3CFB3223C7D2A4E949D3 /* Pods-Logger.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Logger/Logger.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Logger/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iotsolution.Logger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
 		BE04FE0A22EAA5FB00EFA0CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */;
@@ -519,15 +410,6 @@
 			buildConfigurations = (
 				BE04FDD922E850F800EFA0CD /* Debug */,
 				BE04FDDA22E850F800EFA0CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE04FDDB22E850F800EFA0CD /* Build configuration list for PBXNativeTarget "Logger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE04FDDC22E850F800EFA0CD /* Debug */,
-				BE04FDDD22E850F800EFA0CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
