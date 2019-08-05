@@ -41,7 +41,7 @@ see [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)、[Coc
 
 1.下载项目拷贝`Modules`文件夹到`.xcodeproj`同级目录
 
-![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/move.jpg)
+![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/move.png)
 
 2.修改`podfile`文件`./`表示当前文件夹
 
@@ -87,13 +87,12 @@ end
     DDLogInfo(@"Printing SalesProjections.doc");
     DDLogVerbose(@"六国被秦国灭亡的教训，是许多文史家关注的话题。仅“三苏”就每人写了一篇《六国论》。苏轼的《六国论》，针对六国久存而秦速亡的对比分析，突出强调了“士”的作用");
 }
-
 ```
 
 5.查看手机`WIFI`的`ip`地址
 
-![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/ip.jpg)
+![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/ip.png)
 
 6.电脑处于同一个局域网WIFI下 打开浏览器 输入手机的` ip地址:61234`  效果如下
 
-![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/show.jpg)
+![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/show.gif)
