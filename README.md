@@ -12,6 +12,12 @@
 ```
 $git clone https://github.com/asomePubcode/Logger.git
 ```
+
+* 进入工程根目录
+```
+$cd Logger/Logger
+```
+
 * 安装依赖
 
 ```
