@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LiveLogging : Logging
 + (NSString *)liveLogWebPath;
++ (void)logToWeb:(NSString *)logMessage;
 @end
 
 NS_ASSUME_NONNULL_END

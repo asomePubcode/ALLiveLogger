@@ -6,12 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
+
 #import "WebSocket.h"
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#define kHasDDLog 1
+#endif
 
 #define WebSocketLoggerDidDieNotification  @"WebSocketLoggerDidDie"
 
-@interface WebSocketLogger : DDAbstractLogger <DDLogger>
+@interface WebSocketLogger :
+#if kHasDDLog
+DDAbstractLogger <DDLogger>
+#endif
 {
     WebSocket *websocket;
     BOOL isWebSocketOpen;
@@ -21,7 +28,10 @@
 
 @end
 
-@interface WebSocketFormatter : NSObject <DDLogFormatter>
+@interface WebSocketFormatter : NSObject
+#if kHasDDLog
+<DDLogFormatter>
+#endif
 {
     NSDateFormatter *dateFormatter;
 }

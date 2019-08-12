@@ -8,6 +8,10 @@
 #import "WebSocketLogger.h"
 #import "HTTPLogging.h"
 
+@interface WebSocketLogger ()
+
+@end
+
 @implementation WebSocketLogger
 
 - (id)initWithWebSocket:(WebSocket *)ws
@@ -54,6 +58,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:WebSocketLoggerDidDieNotification object:self];
 }
 
+#if kHasDDLog
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark DDLogger Protocol
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,6 +92,7 @@
         }});
     }
 }
+#endif
 
 @end
 
@@ -107,18 +113,20 @@
     return self;
 }
 
+#if kHasDDLog
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
     NSString *dateAndTime = [dateFormatter stringFromDate:(logMessage->_timestamp)];
     
     NSMutableString *webMsg = [logMessage->_message mutableCopy];
     
-//    [webMsg replaceOccurrencesOfString:@"<"  withString:@"&lt;"  options:0 range:NSMakeRange(0, [webMsg length])];
-//    [webMsg replaceOccurrencesOfString:@">"  withString:@"&gt;"  options:0 range:NSMakeRange(0, [webMsg length])];
-//    [webMsg replaceOccurrencesOfString:@"\n" withString:@"<br/>" options:0 range:NSMakeRange(0, [webMsg length])];
-//    return [NSString stringWithFormat:@"%@ &nbsp;%@", dateAndTime, webMsg];
+    //    [webMsg replaceOccurrencesOfString:@"<"  withString:@"&lt;"  options:0 range:NSMakeRange(0, [webMsg length])];
+    //    [webMsg replaceOccurrencesOfString:@">"  withString:@"&gt;"  options:0 range:NSMakeRange(0, [webMsg length])];
+    //    [webMsg replaceOccurrencesOfString:@"\n" withString:@"<br/>" options:0 range:NSMakeRange(0, [webMsg length])];
+    //    return [NSString stringWithFormat:@"%@ &nbsp;%@", dateAndTime, webMsg];
     return [NSString stringWithFormat:@"%@ %@", dateAndTime, webMsg];
 }
 
+#endif
 
 @end

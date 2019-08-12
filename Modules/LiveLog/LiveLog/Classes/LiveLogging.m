@@ -8,6 +8,7 @@
 #import "LiveLogging.h"
 #import "HTTPServer.h"
 #import "LLHTTPConnection.h"
+#import "WebSocket.h"
 
 static HTTPServer *httpServer = nil;
 @implementation LiveLogging
@@ -42,5 +43,14 @@ static HTTPServer *httpServer = nil;
     }
     NSString *path = [subBundle pathForResource:@"livelog" ofType:nil];
     return path;
+}
+
++ (void)logToWeb:(NSString *)logMessage {
+    NSArray *arr = [httpServer valueForKey:@"webSockets"];
+    __block WebSocket *wb = nil;
+    [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        wb = (WebSocket *)obj;
+        [wb sendMessage:logMessage];
+    }];
 }
 @end
