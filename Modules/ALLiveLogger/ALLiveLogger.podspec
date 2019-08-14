@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 s.name             = 'ALLiveLogger'
 s.version          = '0.1.0'
-s.summary          = 'A short description of ALLiveLogger.'
+s.summary          = '一个基于CocoaHTTPServer搭建的本地服务,可以将日志实时输出到PC浏览器的审查元素console中。'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -23,7 +23,7 @@ TODO: Add long description of the pod here.
 DESC
 
 s.homepage         = 'https://github.com/asomePubcode/ALLiveLogger'
- s.screenshots     = 'https://github.com/asomePubcode/ALLiveLogger/blob/master/Images/show.gif',
+ s.screenshots     = 'https://github.com/asomePubcode/ALLiveLogger/blob/master/Images/liveLog.jpg',
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { '448654003@qq.com' => '448654003@qq.com' }
 s.source           = { :git => 'https://github.com/448654003@qq.com/ALLiveLogger.git', :tag => s.version.to_s }
