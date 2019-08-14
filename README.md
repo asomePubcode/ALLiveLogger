@@ -1,104 +1,131 @@
-# Logger
-一个基于[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)、[CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)的简单日志系统。
+# ALLiveLogger
 
-* 支持写入到文件
-* 支持写入到数据库
-* 支持局域网实时日志
+[![CI Status](https://img.shields.io/travis/448654003@qq.com/ALLiveLogger.svg?style=flat)](https://travis-ci.org/448654003@qq.com/ALLiveLogger)
+[![Version](https://img.shields.io/cocoapods/v/ALLiveLogger.svg?style=flat)](https://cocoapods.org/pods/ALLiveLogger)
+[![License](https://img.shields.io/cocoapods/l/ALLiveLogger.svg?style=flat)](https://cocoapods.org/pods/ALLiveLogger)
+[![Platform](https://img.shields.io/cocoapods/p/ALLiveLogger.svg?style=flat)](https://cocoapods.org/pods/ALLiveLogger)
 
-### 使用步骤
+一个基于[CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)搭建的本地服务,可以将日志实时输出到PC浏览器的审查元素console中。
 
-* 下载代码
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+ALLiveLogger is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'ALLiveLogger'
+```
+
+## Usage
+
+* 初始化
+```
+[ALLiveLogger al_initLiveLogger];
+```
+* 反初始化
+```
+[ALLiveLogger al_deinitLiveLogger];
+```
+* 发送日志到web页面
+```
+ [ALLiveLogger al_logToWeb:@"some string"];
+```
+## 支持
+
+* 支持日志神器--[CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
+
+自定义DDLogger[ALDDLogger](https://github.com/asomePubcode/ALLiveLogger/blob/master/Logger/Example/SupportDDLog/ALDDLogger.h)
+```
+//支持DDLog 自定义Logger
+[DDLog addLogger:[ALDDLogger new]];
+```
+或者使用自定义logFormatter [ALDDLogerFormat](https://github.com/asomePubcode/ALLiveLogger/blob/master/Logger/Example/SupportDDLog/ALDDLogerFormat.h)
 
 ```
-$git clone https://github.com/asomePubcode/Logger.git
+//支持DDLog 自定义logFormatter
+DDTTYLogger *ttyLogger = [DDTTYLogger new];
+ttyLogger.logFormatter = [ALDDLogerFormat new];
+[DDLog addLogger:ttyLogger];
 ```
 
-* 进入工程根目录
+* 支持swift下的日志工具--[XCGLogger](https://github.com/DaveWoodCom/XCGLogger)
+
+XCGLogger 自定义format [TestLogger](https://github.com/asomePubcode/ALLiveLogger/blob/master/Logger/Example/SupportXCGLogger/TestLogger.swift)
 ```
-$cd Logger/Logger
+open class TestLogger: NSObject,LogFormatterProtocol {
+    public func format(logDetails: inout LogDetails, message: inout String) -> String {
+        ALLiveLogger.al_log(toWeb: message)
+        return message
+}
+
+    var logger = XCGLogger.init()
+
+    override init() {
+        super.init()
+        self.logger.formatters = [self]
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(loggg), userInfo: nil, repeats: true)
+    }
+
+    @objc func loggg() -> () {
+        self.logger.logln(Date.init())
+    }
+}
+
 ```
 
-* 安装依赖
+* 支持自定义的日志打印
 
+[ALLog](https://github.com/asomePubcode/ALLiveLogger/blob/master/Logger/Example/SupportCustomLog/ALLog.h)
 ```
-$pod install 
-```
-* 运行demo
-* 打开电脑的浏览器输入 "http://你手机IP:61234" （需要电脑和手机为统一局域网下）
-* 加载出页面后打开元素检查，进到日志页面
++ (void)al_log:(NSString *)format, ... {
 
-### 截图
+    va_list args;
+
+    if (format) {
+        va_start(args, format);
+
+        NSString *message = [[NSString alloc] initWithFormat:format arguments:args];
+        NSString *logString = [self formatForMessage:message];
+
+        va_end(args);
+
+        [ALLiveLogger al_logToWeb:logString];
+    }
+
+}
+
++ (NSString *)formatForMessage:(NSString *)format {
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss:SSS"];
+    NSString *dateAndTime = [dateFormatter stringFromDate:(NSDate.date)];
+
+    NSString *file = [NSString stringWithUTF8String:__FILE__];
+    return [NSString stringWithFormat:@"%@ [%@]- %@", dateAndTime,file.lastPathComponent, format];
+}
+```
+## 查看实时日志
 ![网页端实时日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/liveLog.jpg)
-![写入文件和数据库截图](https://github.com/asomePubcode/Logger/blob/master/Images/fileLog.jpg)
-![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/terminalLog.jpg)
 
-### Author
-
-[asomeLiao](https://github.com/asomeLiao)
-### License
-
-see [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)、[CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)
-
-
-
-# 如何在项目中使用-非常重要
-
-
-
-1.下载项目拷贝`Modules`文件夹到`.xcodeproj`同级目录
-
-![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/move.png)
-
-2.修改`podfile`文件`./`表示当前文件夹
-
-```
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
-pod 'Log',:path => './Modules/Log/'
-pod 'LiveLog',:path => './Modules/LiveLog/'
-target 'XXXXX' do
-end
-```
-
-3.执行 `pod install`
-
-4.测试代码在`Appdelegate`中添加如下代码 运行起来
-
-```
-#import "LiveLogging.h"
-
-@interface AppDelegate ()
-
-@end
-
-@implementation AppDelegate
-
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [LiveLogging setLogLevel:DDLogLevelAll];
-    // Override point for customization after application launch.
-    [NSTimer scheduledTimerWithTimeInterval:1
-                                     target:self
-                                   selector:@selector(log)
-                                   userInfo:nil
-                                    repeats:YES];
-    return YES;
-}
-
-- (void)log {
-    NSDictionary *json = @{@"name":@"asml",@"age":@12,@"loc":@"hunan"};
-    DDLogInfo(@"%@",json);
-    DDLogError(@"Paper Jam!");
-    DDLogWarn(@"Low toner");
-    DDLogInfo(@"Printing SalesProjections.doc");
-    DDLogVerbose(@"六国被秦国灭亡的教训，是许多文史家关注的话题。仅“三苏”就每人写了一篇《六国论》。苏轼的《六国论》，针对六国久存而秦速亡的对比分析，突出强调了“士”的作用");
-}
-```
-
-5.查看手机`WIFI`的`ip`地址
+* 查看手机`WIFI`的`ip`地址
 
 ![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/ip.png)
 
-6.电脑处于同一个局域网WIFI下 打开浏览器 输入手机的` ip地址:61234`  效果如下
+* 电脑处于同一个局域网WIFI下 打开浏览器 输入手机的` ip地址:61234`  效果如下
 
 ![控制台日志截图](https://github.com/asomePubcode/Logger/blob/master/Images/show.gif)
+
+## Author
+
+asomeliao@foxmail.com,[asomeLiao](https://github.com/asomeLiao)
+## License
+
+see [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer)

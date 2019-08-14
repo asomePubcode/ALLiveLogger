@@ -59,21 +59,23 @@ ttyLogger.logFormatter = [ALDDLogerFormat new];
 
 XCGLogger 自定义format [TestLogger](https://github.com/asomePubcode/ALLiveLogger/blob/master/Logger/Example/SupportXCGLogger/TestLogger.swift)
 ```
-public func format(logDetails: inout LogDetails, message: inout String) -> String {
-ALLiveLogger.al_log(toWeb: message)
-return message
+open class TestLogger: NSObject,LogFormatterProtocol {
+    public func format(logDetails: inout LogDetails, message: inout String) -> String {
+        ALLiveLogger.al_log(toWeb: message)
+        return message
 }
 
-var logger = XCGLogger.init()
+    var logger = XCGLogger.init()
 
-override init() {
-super.init()
-self.logger.formatters = [self]
-Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(loggg), userInfo: nil, repeats: true)
-}
+    override init() {
+        super.init()
+        self.logger.formatters = [self]
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:#selector(loggg), userInfo: nil, repeats: true)
+    }
 
-@objc func loggg() -> () {
-self.logger.logln(Date.init())
+    @objc func loggg() -> () {
+        self.logger.logln(Date.init())
+    }
 }
 
 ```
