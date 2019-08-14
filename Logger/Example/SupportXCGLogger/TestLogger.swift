@@ -8,11 +8,11 @@
 
 import Foundation
 import XCGLogger
-import LiveLog
+import ALLiveLogger
 
 open class TestLogger: NSObject,LogFormatterProtocol {
     public func format(logDetails: inout LogDetails, message: inout String) -> String {
-        LiveLogging.log(toWeb: message)
+        ALLiveLogger.al_log(toWeb: message)
         return message
     }
     

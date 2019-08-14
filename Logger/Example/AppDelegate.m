@@ -8,13 +8,15 @@
 
 #import "AppDelegate.h"
 
-#if __has_include("LiveLogging.h")
-#import "LiveLogging.h"
-#else
-#import "Logging.h"
-#endif
-
 #import "Logger_iphone-Swift.h"
+
+#import "ALLiveLogger.h"
+#import "ALDDLogger.h"
+#import "ALDDLogerFormat.h"
+
+#import "ALLog.h"
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
+
 @interface AppDelegate ()
 
 @end
@@ -22,33 +24,37 @@
 @implementation AppDelegate
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#ifdef LiveLog
-    [LiveLogging setLogLevel:DDLogLevelAll];
-#else
-    [Logging setLogLevel:DDLogLevelAll];
-#endif
+    [ALLiveLogger al_initLiveLogger];
     
-//    如果要上传服务端
-//    [Logging setLogLevel:DDLogLevelAll rollCallback:^(NSString *filePath) {
-//
-//    }];
+    //支持DDLog 自定义Logger
+    [DDLog addLogger:[ALDDLogger new]];
+    //或者
+    //支持DDLog 自定义logFormatter
+    DDTTYLogger *ttyLogger = [DDTTYLogger new];
+    ttyLogger.logFormatter = [ALDDLogerFormat new];
+    [DDLog addLogger:ttyLogger];
+    
+    //支持swift XCGLogger
+    TestLogger *tlogger = [[TestLogger alloc] init];
+
     [NSTimer scheduledTimerWithTimeInterval:1
                                      target:self
                                    selector:@selector(log)
                                    userInfo:nil
                                     repeats:YES];
-    TestLogger *tlogger = [[TestLogger alloc] init];
+    
+    
     return YES;
 }
 
 - (void)log {
 //    NSDictionary *json = @{@"name":@"asml",@"age":@12,@"loc":@"hunan"};
-//    DDLogInfo(@"%@",json);
+    DDLogInfo(@"%@",NSDate.date);
+    ALLogger(@"%@",NSDate.date);
 //    DDLogError(@"Paper Jam!");
-    DDLogWarn(@"Low toner");
+//    DDLogWarn(@"Low toner");
 //    DDLogInfo(@"Printing SalesProjections.doc");
 //    NSString *liuguolun = @"六国被秦国灭亡的教训，是许多文史家关注的话题。仅“三苏”就每人写了一篇《六国论》。苏轼的《六国论》，针对六国久存而秦速亡的对比分析，突出强调了“士”的作用。苏轼认为，六国诸侯卿相皆争养士，是久存的原因。只要把";
 //    DDLogVerbose(@"%@",liuguolun);

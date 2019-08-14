@@ -14,6 +14,9 @@
 		BE04FE0522EAA5FB00EFA0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04FE0322EAA5FB00EFA0CD /* LaunchScreen.storyboard */; };
 		BE04FE0822EAA5FB00EFA0CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FE0722EAA5FB00EFA0CD /* main.m */; };
 		BEA08F82230135D100DC3105 /* TestLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA08F81230135D100DC3105 /* TestLogger.swift */; };
+		BEA333822303F5DD00B1078D /* ALDDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333812303F5DD00B1078D /* ALDDLogger.m */; };
+		BEA333852303F6DB00B1078D /* ALDDLogerFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333842303F6DB00B1078D /* ALDDLogerFormat.m */; };
+		BEA3338A2303FD3A00B1078D /* ALLog.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333892303FD3A00B1078D /* ALLog.m */; };
 		D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,12 @@
 		BE04FE0722EAA5FB00EFA0CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEA08F80230135D100DC3105 /* Logger-iphone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Logger-iphone-Bridging-Header.h"; sourceTree = "<group>"; };
 		BEA08F81230135D100DC3105 /* TestLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogger.swift; sourceTree = "<group>"; };
+		BEA333802303F5DD00B1078D /* ALDDLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDDLogger.h; sourceTree = "<group>"; };
+		BEA333812303F5DD00B1078D /* ALDDLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDDLogger.m; sourceTree = "<group>"; };
+		BEA333832303F6DB00B1078D /* ALDDLogerFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDDLogerFormat.h; sourceTree = "<group>"; };
+		BEA333842303F6DB00B1078D /* ALDDLogerFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALDDLogerFormat.m; sourceTree = "<group>"; };
+		BEA333882303FD3A00B1078D /* ALLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLog.h; sourceTree = "<group>"; };
+		BEA333892303FD3A00B1078D /* ALLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ALLog.m; path = ../ALLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +82,7 @@
 		BE04FDC122E850F600EFA0CD = {
 			isa = PBXGroup;
 			children = (
-				BE04FDF722EAA5E200EFA0CD /* Logger-iphone */,
+				BE04FDF722EAA5E200EFA0CD /* Example */,
 				BE04FDCB22E850F600EFA0CD /* Products */,
 				50BAEB34BBBB43FF121B342B /* Pods */,
 				04911C2616E935393C619A3E /* Frameworks */,
@@ -88,12 +97,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE04FDF722EAA5E200EFA0CD /* Logger-iphone */ = {
+		BE04FDF722EAA5E200EFA0CD /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				BE04FDF822EAA5E200EFA0CD /* AppDelegate.h */,
 				BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */,
-				BEA08F81230135D100DC3105 /* TestLogger.swift */,
+				BEA3338B230400D600B1078D /* SupportCustomLog */,
+				BEA333862303FC9000B1078D /* SupportDDLog */,
+				BEA333872303FCA200B1078D /* SupportXCGLogger */,
 				BE04FDFB22EAA5E200EFA0CD /* ViewController.h */,
 				BE04FDFC22EAA5E200EFA0CD /* ViewController.m */,
 				BE04FDFE22EAA5E200EFA0CD /* Main.storyboard */,
@@ -103,7 +114,35 @@
 				BE04FE0722EAA5FB00EFA0CD /* main.m */,
 				BEA08F80230135D100DC3105 /* Logger-iphone-Bridging-Header.h */,
 			);
-			path = "Logger-iphone";
+			path = Example;
+			sourceTree = "<group>";
+		};
+		BEA333862303FC9000B1078D /* SupportDDLog */ = {
+			isa = PBXGroup;
+			children = (
+				BEA333802303F5DD00B1078D /* ALDDLogger.h */,
+				BEA333812303F5DD00B1078D /* ALDDLogger.m */,
+				BEA333832303F6DB00B1078D /* ALDDLogerFormat.h */,
+				BEA333842303F6DB00B1078D /* ALDDLogerFormat.m */,
+			);
+			path = SupportDDLog;
+			sourceTree = "<group>";
+		};
+		BEA333872303FCA200B1078D /* SupportXCGLogger */ = {
+			isa = PBXGroup;
+			children = (
+				BEA08F81230135D100DC3105 /* TestLogger.swift */,
+			);
+			path = SupportXCGLogger;
+			sourceTree = "<group>";
+		};
+		BEA3338B230400D600B1078D /* SupportCustomLog */ = {
+			isa = PBXGroup;
+			children = (
+				BEA333882303FD3A00B1078D /* ALLog.h */,
+				BEA333892303FD3A00B1078D /* ALLog.m */,
+			);
+			path = SupportCustomLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +223,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-resources.sh",
-				"${PODS_ROOT}/../../Modules/LiveLog/LiveLog/Assets/Resource.bundle",
+				"${PODS_ROOT}/../../Modules/ALLiveLogger/ALLiveLogger/Assets/Resource.bundle",
 				"${PODS_ROOT}/XCGLogger/.swift-version",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -228,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA3338A2303FD3A00B1078D /* ALLog.m in Sources */,
 				BE04FDFD22EAA5E200EFA0CD /* ViewController.m in Sources */,
+				BEA333852303F6DB00B1078D /* ALDDLogerFormat.m in Sources */,
 				BEA08F82230135D100DC3105 /* TestLogger.swift in Sources */,
 				BE04FE0822EAA5FB00EFA0CD /* main.m in Sources */,
+				BEA333822303F5DD00B1078D /* ALDDLogger.m in Sources */,
 				BE04FDFA22EAA5E200EFA0CD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +419,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AQATEQGY4;
-				INFOPLIST_FILE = "Logger-iphone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -386,7 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iotsolution.Logger-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Logger-iphone/Logger-iphone-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Logger-iphone-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,7 +444,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AQATEQGY4;
-				INFOPLIST_FILE = "Logger-iphone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iotsolution.Logger-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Logger-iphone/Logger-iphone-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Logger-iphone-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

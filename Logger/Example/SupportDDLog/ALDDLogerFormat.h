@@ -1,8 +1,8 @@
 //
-//  LogFormatter.h
-//  Logger
+//  ALDDLogerFormat.h
+//  Logger-iphone
 //
-//  Created by 廖亚雄 on 2019/7/24.
+//  Created by 廖亚雄 on 2019/8/14.
 //  Copyright © 2019 廖亚雄. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LogFormatter : NSObject<DDLogFormatter>
+@interface ALDDLogerFormat : NSObject<DDLogFormatter>
 
 @end
 
