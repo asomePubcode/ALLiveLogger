@@ -27,6 +27,4 @@ open class TestLogger: NSObject,LogFormatterProtocol {
     @objc func loggg() -> () {
         self.logger.logln(Date.init())
     }
-    
-    
 }
