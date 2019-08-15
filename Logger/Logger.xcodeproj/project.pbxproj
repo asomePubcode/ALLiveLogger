@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5062F205FBEC38B29E56A9A /* Pods_Logger_iphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFACB11D793B03DE8B5C97 /* Pods_Logger_iphone.framework */; };
 		BE04FDFA22EAA5E200EFA0CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FDF922EAA5E200EFA0CD /* AppDelegate.m */; };
 		BE04FDFD22EAA5E200EFA0CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE04FDFC22EAA5E200EFA0CD /* ViewController.m */; };
 		BE04FE0022EAA5E200EFA0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04FDFE22EAA5E200EFA0CD /* Main.storyboard */; };
@@ -17,14 +18,13 @@
 		BEA333822303F5DD00B1078D /* ALDDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333812303F5DD00B1078D /* ALDDLogger.m */; };
 		BEA333852303F6DB00B1078D /* ALDDLogerFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333842303F6DB00B1078D /* ALDDLogerFormat.m */; };
 		BEA3338A2303FD3A00B1078D /* ALLog.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA333892303FD3A00B1078D /* ALLog.m */; };
-		D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27AFACB11D793B03DE8B5C97 /* Pods_Logger_iphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logger_iphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDB3CFB3223C7D2A4E949D3 /* Pods-Logger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Logger/Pods-Logger.release.xcconfig"; sourceTree = "<group>"; };
 		6852C7DBF779210A267E2CEB /* Pods-Logger-iphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger-iphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone.release.xcconfig"; sourceTree = "<group>"; };
 		8D459E939B113C1066F81F67 /* Pods-Logger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logger/Pods-Logger.debug.xcconfig"; sourceTree = "<group>"; };
-		9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Logger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC53C474A7597171AA5800B4 /* Pods-Logger-iphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logger-iphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone.debug.xcconfig"; sourceTree = "<group>"; };
 		BE04FDF622EAA5E200EFA0CD /* Logger-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Logger-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17E26437C05F6B878852DFF /* libPods-Logger-iphone.a in Frameworks */,
+				B5062F205FBEC38B29E56A9A /* Pods_Logger_iphone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4D1BC887147795BBAC6DCD /* libPods-Logger.a */,
-				9CE6086A8B2D0B59A64ACFED /* libPods-Logger-iphone.a */,
+				27AFACB11D793B03DE8B5C97 /* Pods_Logger_iphone.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 				BE04FDF222EAA5E200EFA0CD /* Sources */,
 				BE04FDF322EAA5E200EFA0CD /* Frameworks */,
 				BE04FDF422EAA5E200EFA0CD /* Resources */,
-				0658F0A962FEF7328C5D3624 /* [CP] Copy Pods Resources */,
+				DC15EC738280684E6B9A3437 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,30 +214,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0658F0A962FEF7328C5D3624 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-resources.sh",
-				"${PODS_ROOT}/../../Modules/ALLiveLogger/ALLiveLogger/Assets/Resource.bundle",
-				"${PODS_ROOT}/XCGLogger/.swift-version",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/.swift-version",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		160743C2C68CCAA80F6ABF3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +234,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC15EC738280684E6B9A3437 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALLiveLogger/ALLiveLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALLiveLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

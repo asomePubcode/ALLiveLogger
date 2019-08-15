@@ -19,11 +19,11 @@ s.summary          = '一个基于CocoaHTTPServer搭建的本地服务,可以将
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
 s.description      = <<-DESC
-TODO: Add long description of the pod here.
+一个基于CocoaHTTPServer搭建的本地服务,可以将日志实时输出到PC浏览器的审查元素console中。
 DESC
 
 s.homepage         = 'https://github.com/asomePubcode/ALLiveLogger'
- s.screenshots     = 'https://github.com/asomePubcode/ALLiveLogger/blob/master/Images/liveLog.jpg',
+s.screenshots     = 'https://github.com/asomePubcode/ALLiveLogger/blob/master/Images/liveLog.jpg',
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'asomeliao' => 'asomeliao@foxmail.com' }
 s.source           = { :git => 'https://github.com/448654003@qq.com/ALLiveLogger.git', :tag => s.version.to_s }
@@ -33,5 +33,5 @@ s.ios.deployment_target = '8.0'
 s.resources    = 'ALLiveLogger/Assets/Resource.bundle'
 s.source_files = 'ALLiveLogger/Classes/**/*'
 s.requires_arc = true
-s.dependency 'CocoaHTTPServer'
+s.dependency 'CocoaAsyncSocket'
 end
