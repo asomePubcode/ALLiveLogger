@@ -30,8 +30,8 @@ s.source           = { :git => 'https://github.com/asomePubcode/ALLiveLogger.git
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.ios.deployment_target = '8.0'
-s.resources    = 'ALLiveLogger/Assets/Resource.bundle'
-s.source_files = 'ALLiveLogger/Classes/**/*'
+s.resources    = 'ALLiveLogger/Assets/*.bundle'
+s.source_files = 'ALLiveLogger/Classes/**/*{.h,.m}'
 s.requires_arc = true
 s.dependency 'CocoaAsyncSocket'
 end
