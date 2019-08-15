@@ -26,7 +26,7 @@ s.homepage         = 'https://github.com/asomePubcode/ALLiveLogger'
 s.screenshots     = 'https://github.com/asomePubcode/ALLiveLogger/blob/master/Images/liveLog.jpg',
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'asomeliao' => 'asomeliao@foxmail.com' }
-s.source           = { :git => 'https://github.com/448654003@qq.com/ALLiveLogger.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/asomePubcode/ALLiveLogger.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.ios.deployment_target = '8.0'
