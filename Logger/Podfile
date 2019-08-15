@@ -7,7 +7,7 @@ target 'Logger-iphone' do
     use_modular_headers!
     # Pods for Logger
 #    pod 'Log',:path => '../Modules/Log/'
-    pod 'ALLiveLogger',:path => '../Modules/ALLiveLogger/'
+    pod 'ALLiveLogger',:path => '../'
     pod 'XCGLogger'
     pod 'CocoaLumberjack'
 #    pod 'CocoaHTTPServer',:git => 'https://github.com/asameLiao/CocoaHTTPServer.git'
