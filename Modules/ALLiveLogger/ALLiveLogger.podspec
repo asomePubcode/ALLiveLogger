@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'ALLiveLogger'
-s.version          = '0.1.2'
+s.version          = '0.2.0'
 s.summary          = '一个基于CocoaHTTPServer搭建的本地服务,可以将日志实时输出到PC浏览器的审查元素console中。'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ s.source           = { :git => 'https://github.com/asomePubcode/ALLiveLogger.git
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.ios.deployment_target = '8.0'
-s.resources    = 'ALLiveLogger/Assets/*.bundle'
-s.source_files = 'ALLiveLogger/Classes/**/*{.h,.m}'
+s.resource    = 'ALLiveLogger/Assets/*.bundle'
+s.source_files = 'ALLiveLogger/Classes/**/*'
 s.requires_arc = true
 s.dependency 'CocoaAsyncSocket'
 end
