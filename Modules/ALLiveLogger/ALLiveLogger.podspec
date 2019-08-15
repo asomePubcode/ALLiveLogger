@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'ALLiveLogger'
-s.version          = '0.1.0'
+s.version          = '0.1.1'
 s.summary          = '一个基于CocoaHTTPServer搭建的本地服务,可以将日志实时输出到PC浏览器的审查元素console中。'
 
 # This description is used to generate tags and improve search results.
