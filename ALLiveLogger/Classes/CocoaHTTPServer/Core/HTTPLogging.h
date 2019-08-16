@@ -138,18 +138,39 @@ do{ if(HTTP_LOG_ASYNC_ENABLED) LOG_MAYBE(async, lvl, flg, ctx, nil, __FUNCTION__
                                                   HTTP_LOG_CONTEXT, frmt, ##__VA_ARGS__)
 
 #else
+
+#define THIS_FILE            [[NSString stringWithUTF8String:__FILE__] lastPathComponent]
+
+#define THIS_METHOD          [NSString stringWithUTF8String:_cmd]
+
+#ifdef DEBUG
+
 #define HTTPLogError         if (HTTP_LOG_ERROR) NSLog
 
 #define HTTPLogWarn          if (HTTP_LOG_WARN) NSLog
+
 #define HTTPLogInfo          if (HTTP_LOG_INFO) NSLog
 
 #define HTTPLogVerbose       if (HTTP_LOG_VERBOSE) NSLog
 
-#define HTTPLogTrace()              NSLog(@"%s[%p]: %s", __FILE__, self, _cmd)
+#define HTTPLogTrace()       NSLog(@"%@[%p]: %@", THIS_FILE, self, THIS_METHOD)
 
 #define HTTPLogTrace2        if (HTTP_LOG_TRACE) NSLog
 
-#define THIS_FILE   [[NSString stringWithUTF8String:__FILE__] lastPathComponent]
+#else
 
-#define THIS_METHOD   [NSString stringWithUTF8String:_cmd]
+#define HTTPLogError(...)
+
+#define HTTPLogWarn(...)
+
+#define HTTPLogInfo(...)
+
+#define HTTPLogVerbose(...)
+
+#define HTTPLogTrace(...)
+
+#define HTTPLogTrace2(...)
+
+#endif
+
 #endif
