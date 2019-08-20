@@ -17,6 +17,9 @@
 #import "ALLog.h"
 static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
+//如果项目使用的是NSLog,需要把NSLog 定义下
+#define NSLog ALLogger
+
 @interface AppDelegate ()
 
 @end
@@ -51,8 +54,9 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 - (void)log {
 //    NSDictionary *json = @{@"name":@"asml",@"age":@12,@"loc":@"hunan"};
-    DDLogInfo(@"%@",NSDate.date);
-    ALLogger(@"%@",NSDate.date);
+    DDLogInfo(@"DDLogInfo-%@",NSDate.date);
+    ALLogger(@"ALLogger-%@",NSDate.date);
+    NSLog(@"NSLog-%@",NSDate.date);
 //    DDLogError(@"Paper Jam!");
 //    DDLogWarn(@"Low toner");
 //    DDLogInfo(@"Printing SalesProjections.doc");

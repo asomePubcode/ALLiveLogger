@@ -244,7 +244,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALLiveLogger/ALLiveLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
@@ -263,7 +263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Logger-iphone/Pods-Logger-iphone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
